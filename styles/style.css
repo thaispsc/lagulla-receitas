@@ -11,6 +11,42 @@
 }
 
 #nav-header {
-    background-color: rgb(235, 235, 235) !important;
+    background-color: #fff !important;
     font-weight: 500;
+    color: #000 !important;
+}
+
+#nav-header .nav-link {
+    color: #000;
+}
+
+.navbar-brand span {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.card-body {
+    height: 100px;
+}
+
+footer {
+    background-color: black;
+}
+
+footer .row {
+    height: 60px;
+}
+
+#footer-top, #footer-top i {
+    color:#fff;
+}
+
+#social-icons {
+    text-align: right;
+}
+
+#social-icons i {
+    margin-right: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
 }
