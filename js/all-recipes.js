@@ -32,12 +32,12 @@ fetch(BASE_URL)
 });
 
 let output2='';
+const modal = document.querySelector(".modal");
 function click() {
   const botoesAbrirModal = document.querySelectorAll("#botao-abrir-modal");
   botoesAbrirModal.forEach((botao) => {
     botao.addEventListener("mousedown", (e) => {
 const BASE_URL2 = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
-const modal = document.querySelector(".modal");
 const recipeId = e.target.getAttribute("recipe-id");
 fetch(BASE_URL2+recipeId)
   .then((value) => {
@@ -48,7 +48,7 @@ fetch(BASE_URL2+recipeId)
       output2 += `<div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
         <h2 class="mb-3 text-center">${recipe.strMeal}</h2>
@@ -66,6 +66,7 @@ fetch(BASE_URL2+recipeId)
     </div>`;
     });
     modal.innerHTML = output2;
+    click2();
   })
   .catch((error) => {
     console.log(error);
@@ -74,3 +75,11 @@ fetch(BASE_URL2+recipeId)
     });
   });
 }
+
+// function click2() {
+// const closeModal = document.querySelector(".fade");
+// console.log(closeModal);
+// closeModal.addEventListener("mousedown", (e) => {
+//   modal.style.display= "none";
+// });
+// }
