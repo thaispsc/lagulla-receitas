@@ -1,14 +1,16 @@
-const BASE_URL = "https://www.themealdb.com/api/json/v1/1/filter.php?i";
-const allRecipesList = document.querySelector("#all-recipes-list");
-let output1 = "";
+const BASE_URL = "https://www.themealdb.com/api/json/v1/1/filter.php?a=";
+const recipesList = document.querySelector("#recipes-list");
+const cuisine = recipesList.getAttribute("cuisine");
+let output = "";
 
-fetch(BASE_URL)
+
+fetch(BASE_URL+ cuisine)
   .then((value) => {
     return value.json();
   })
   .then((value) => {
     value.meals.forEach((recipe) => {
-      output1 += `<div class="col-lg-3 col-md-6 mb-5">
+      output += `<div class="col-lg-3 col-md-6 mb-5">
       <div class="card mx-auto -3 bg-body rounded" style="width: 16rem">
         <img src="${recipe.strMealThumb}" class="card-img-top mx-auto" alt="${recipe.strMeal}" />
         <div class="card-body">
@@ -22,7 +24,7 @@ fetch(BASE_URL)
       </div>
     </div>`;
     });
-    allRecipesList.innerHTML = output1;
+    recipesList.innerHTML = output;
     click();
   })
   .catch((error) => {
@@ -30,7 +32,7 @@ fetch(BASE_URL)
     alert("Could not load page data.");
   });
 
-let output2 = "";
+  let output2 = "";
 const modal = document.querySelector(".modal-dialog");
 function click() {
   const botoesAbrirModal = document.querySelectorAll("#button-open-modal");

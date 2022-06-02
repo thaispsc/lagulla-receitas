@@ -40,14 +40,23 @@ main {
     font-size: 1.5rem;
 }
 
-.card:hover {
-    border: 3px solid #000;
-    cursor: pointer;
+.dropdown-menu {
+    --bs-dropdown-link-active-bg: #000;
+    --bs-dropdown-link-active-color: #fff;
 }
 
 
+.card:hover {
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.23);
+}
+
 .card-body h6 {
     height: 45px;
+}
+
+#button-open-modal:hover {
+    background-color: #000 !important;
+    color: #fff !important;   
 }
 
 #img-recipe {
