@@ -46,8 +46,12 @@ main {
 }
 
 
-.card-body {
-    height: 85px;
+.card-body h6 {
+    height: 45px;
+}
+
+#img-recipe {
+    width: 100%;
 }
 
 textarea {
@@ -75,4 +79,8 @@ footer .row {
     margin-right: 1em;
     font-size: 1.5em;
     cursor: pointer;
+}
+
+#loading {
+    width: 200px;
 }

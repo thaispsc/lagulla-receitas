@@ -1,6 +1,6 @@
 const BASE_URL = "https://www.themealdb.com/api/json/v1/1/filter.php?a=mexican";
 const allRecipesList = document.querySelector("#all-recipes-list");
-let outputAllRecipes = "";
+let output = "";
 
 
 fetch(BASE_URL)
@@ -9,7 +9,7 @@ fetch(BASE_URL)
   })
   .then((value) => {
     value.meals.forEach((recipe) => {
-      outputAllRecipes += `<div class="col-lg-3 col-md-6 mb-5">
+      output += `<div class="col-lg-3 col-md-6 mb-5">
       <div class="card mx-auto -3 bg-body rounded" style="width: 16rem">
         <img src="${recipe.strMealThumb}" class="card-img-top mx-auto" alt="${recipe.strMeal}" />
         <div class="card-body">
@@ -18,7 +18,7 @@ fetch(BASE_URL)
       </div>
     </div>`;
     });
-    allRecipesList.innerHTML += outputAllRecipes;
+    allRecipesList.innerHTML = output;
   })
   .catch((error) => {
     console.log(error);
