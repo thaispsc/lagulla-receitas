@@ -1,5 +1,5 @@
 const BASE_URL = "https://www.themealdb.com/api/json/v1/1/filter.php?i";
-const allRecipesList = document.querySelector("#all-recipes-list");
+const recipesList = document.querySelector("#recipes-list");
 let output1 = "";
 
 fetch(BASE_URL)
@@ -22,7 +22,7 @@ fetch(BASE_URL)
       </div>
     </div>`;
     });
-    allRecipesList.innerHTML = output1;
+    recipesList.innerHTML = output1;
     click();
   })
   .catch((error) => {

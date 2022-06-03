@@ -54,9 +54,18 @@ main {
     height: 45px;
 }
 
-#button-open-modal:hover {
+#button-open-modal {
     background-color: #000 !important;
-    color: #fff !important;   
+    color: #fff !important;  
+}
+
+#button-open-modal:hover {
+    background-color: #fff !important;
+    color: #000 !important;   
+}
+
+.btn-close {
+    box-shadow: none !important;
 }
 
 #img-recipe {
@@ -65,6 +74,26 @@ main {
 
 textarea {
     height: 120px;
+}
+
+#exampleInputRecipeIngredient {
+    border: 1px solid !important;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+    box-shadow: none !important;
+    
+}
+
+
+#search-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: none !important;
+}
+
+#search-button i {
+    font-size: 1.5em;
 }
 
 footer {
