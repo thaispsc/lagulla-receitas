@@ -72,17 +72,19 @@ main {
     width: 100%;
 }
 
+input, textarea {
+    border: 1px solid !important;
+    box-shadow: none !important;
+}
+
 textarea {
     height: 120px;
 }
 
 #exampleInputRecipeIngredient {
-    border: 1px solid !important;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    border-right: none;
-    box-shadow: none !important;
-    
+    border-right: none;    
 }
 
 
