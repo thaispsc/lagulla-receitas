@@ -35,8 +35,8 @@ fetch(BASE_URL+ cuisine)
   let output2 = "";
 const modal = document.querySelector(".modal-dialog");
 function click() {
-  const botoesAbrirModal = document.querySelectorAll("#button-open-modal");
-  botoesAbrirModal.forEach((botao) => {
+  const openModalButton = document.querySelectorAll("#button-open-modal");
+  openModalButton.forEach((botao) => {
     botao.addEventListener("mousedown", (e) => {
       const BASE_URL2 = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
       const recipeId = e.target.getAttribute("recipe-id");
