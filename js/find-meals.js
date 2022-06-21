@@ -24,7 +24,7 @@ function search() {
           <h6 class="card-title my-3 text-center">${recipe.strMeal}</h6>
           <div class="text-center">
           <button type="button" class="btn bg-light text-dark border-dark" data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop" recipe-id="${recipe.idMeal}" id="button-open-modal">Ver receita
+          data-bs-target="#staticBackdrop" recipe-id="${recipe.idMeal}" id="button-open-modal">Go to recipe
           </button>
           </div>
         </div>
