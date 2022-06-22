@@ -203,8 +203,10 @@ footer {
     flex-shrink: 0;
 }
 
-footer .row {
-    height: 60px;
+@media(min-width: 768px) {
+    footer .row {
+        height: 60px;
+    }
 }
 
 #footer-top, #footer-top i {
