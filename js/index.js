@@ -8,10 +8,10 @@ fetch(BASE_URL)
   })
   .then((value) => {
     value.meals.forEach((recipe) => {
-      output += `<div class="col-5 pe-5">
+      output += `<div class="col-md-5 pe-5">
       <img src="${recipe.strMealThumb}" id="img-recipe" alt="Recipe of the day">
     </div>
-    <div class="col-7">
+    <div class="col-md-7">
     <h3 class="mb-3">${recipe.strMeal}</h3>
     <h5>Cuisine</h5>
     <p>${recipe.strArea}.</p>
