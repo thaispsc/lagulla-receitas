@@ -1,3 +1,3 @@
 # yummy-recipes
 
-Site com receitas desenvolvido com Bootstrap e JavaScript puro.
+Site de receitas desenvolvido com Bootstrap e JavaScript puro.
